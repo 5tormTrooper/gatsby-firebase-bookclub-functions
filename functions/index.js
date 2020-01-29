@@ -10,7 +10,7 @@ const admin = require("firebase-admin");
 
 admin.initializeApp();
 
-exports.createUserProfile = functions.https.onCall(async (data, context) => {
+exports.createPublicProfile = functions.https.onCall(async (data, context) => {
   checkAuthentication(context);
   dataValidator(data, {
     username: "string"
